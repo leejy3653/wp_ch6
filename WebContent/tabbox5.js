@@ -1,0 +1,15 @@
+var tabBox = {
+	onTabClicked : function(event) {
+		var lisSelected = document.getElementsByClassName("selected");
+		(lisSelected.length == 1) && (lisSelected[0].className = "");
+		this.className = "selected";
+	},
+	init : function() {
+		var div = document.getElementsByClassName("tab-box")[0];
+		var ul = div.childNodes[1];
+		var lis = ul.getElementsByTagName("li");
+		for (var i = 0; i < lis.length; i++) {
+			lis[i].addEventListener("click", this.onTabClicked);
+		}
+	}
+}
