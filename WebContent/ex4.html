@@ -9,10 +9,11 @@
 
 	var i = 5;
 	var f = function() {
-		var i = 20; //var을 붙이면 범위가 {}안
+		var i = 20; //var을 붙이면 범위가 {}안 var를 안붙이면 전역 Scope
 		console.log(i);
 		i = i - 1;
 	}
+
 	f()
 	console.log(i);
 </script>
