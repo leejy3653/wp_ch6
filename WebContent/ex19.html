@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BOM - location 객체</title>
+<script type="text/javascript">
+	var s = '';
+	for(key in location){
+		s += (key+":"+location[key]+"\n");
+	}
+	console.log(s);
+	
+</script>
+</head>
+<body>
+	<h1>BOM - location 객체</h1>
+	<!-- refresh 방법 1 -->
+	<button onclick="location=location;">refresh1</button>
+	<br>
+	
+	<!-- refresh 방법 2 -->
+	<button onclick="location.href=location.href">refresh2</button>
+	<br>
+	
+	<!-- refresh 방법 3 -->
+	<button onclick='location.assign("");'>refresh3</button>
+	<br>
+	
+	<!-- refresh 방법 4 -->
+	<button onclick='location.replace(location);'>refresh4</button>
+	<br>
+	
+	<!-- refresh 방법 5 (ctrl+f5) -->
+	<button onclick='location.reload();'>refresh5</button>
+	
+</body>
+</html>
